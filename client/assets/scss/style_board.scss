@@ -1,0 +1,167 @@
+@import "./media_query";
+@import "./colors";
+//@import "./tab";
+body{
+  background-color: $body;
+  //font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
+  .total{
+    display: flex;
+    justify-content: center;
+   
+    .partToDo{
+      background-color: $container;
+      border:1px solid white;
+      border-radius: 20px;
+      position: absolute;
+      padding: 30px;
+      width:90%;
+        .title{
+          font-family: "Comic Sans MS", cursive, sans-serif;
+          font-style: italic;
+          text-align: center;
+          position: relative;
+          color:white;
+        }
+
+        .tab_board {
+          overflow: hidden;
+          //border-top: 1px solid;
+      
+          //border: 1px solid #9a9a9a;
+          //background-color: #9a9a9a;
+          background-color: white;
+          border-radius: 10px;
+          height: 50px;
+          button {
+            //color: white;
+            //color:$hover;
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: 0.3s;
+            padding: 0px 16px;
+            height: 99.5%;
+            border-radius: 10px;
+          }
+          button:hover{
+            background-color: $hover;
+            color:white;
+          }
+          .dashboard {
+            background-color:inherit;
+            color:$hover;
+          }
+          .boards {
+            background-color: $ordinary;
+            color:white;
+          }
+          .todos {
+            background-color: inherit;
+            color:$hover;
+          }
+        }
+  
+
+      .boardss{
+            padding: 10px;
+            margin-top:10px;
+            background-color:transparent;
+            display: flex;
+            justify-content: center;
+            height: 300px;
+            min-width: 200px;
+            background-color :$todo;
+            //margin: 10px;
+            .boardProp{   
+              @include  breakpoint(large) {
+                padding: 0px;
+                margin: 1px;
+              }
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              flex-grow: 1;
+              padding: 3%;
+              width: 50%;
+              height: 250px;
+              min-width: 95px;
+              margin: 10px;
+                
+              ul{
+                  margin-left: 2%;
+                /*  list-style-position: outside;*/
+                  //font-family: "Comic Sans MS", cursive, sans-serif;
+                  color:black;
+                  @include  breakpoint(xsmall) {
+                  font-size: 13px;
+                  margin-left: 0px;
+                  list-style-position: unset;
+                  }
+                
+              }
+            }
+        
+      }
+    }
+  }
+}
+  div {
+      box-sizing: border-box;
+      border-radius: 10px;
+      
+    }
+    .buttonDesign{
+      /*background-image: url("background7.jpg");*/
+      background-color:$ordinary;
+      color: white;
+      padding: 8px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 40px;
+      align-items: center;
+      border-color: white;
+      @include  breakpoint(small) {
+      font-size: 15px;
+      padding:0px;
+      size: 5px;
+      }
+    }
+    .buttonDesign:hover{
+      background-color: $hover;
+      cursor:pointer;
+    }
+    h3{
+      margin-left: 5%;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      color:$all_done;
+    
+    }
+  
+
+
+
+
+
+
+ /* @media only screen and (max-width:590px) {*/
+ 
+ /*  .boardProp{
+     padding: 0px;
+     margin: 1px;
+   }
+    ul{
+      font-size: 13px;
+      margin-left: 0px;
+      list-style-position: unset;
+    }
+   .buttonDesign{
+    font-size: 15px;
+    padding:0px;
+    size: 5px;
+   }
+  
+}*/

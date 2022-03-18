@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "823b8d6b-c588-45b5-aa28-342425014262",
+		"name": "todo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getToDos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/api/todo",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"todo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getToDoById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/api/todo/d9df7140-5ca0-4eb3-bf86-9e27bb39b527",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"todo",
+						"d9df7140-5ca0-4eb3-bf86-9e27bb39b527"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addToDo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"boardId\":\"2\",\r\n\t\"header\":\"todo1\",\r\n    \"tasks\":[{},{}]\r\n}"
+				},
+				"url": {
+					"raw": "localhost/api/todo",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"todo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateToDo",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"boardId\":\"3\",\r\n\t\"header\":\"todo2\",\r\n    \"tasks\":[{},{}]\r\n}"
+				},
+				"url": {
+					"raw": "localhost/api/todo/ea149535-05ca-4a61-8e5a-416f3270980f",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"todo",
+						"ea149535-05ca-4a61-8e5a-416f3270980f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "removeToDo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost/api/todo/ea149535-05ca-4a61-8e5a-416f3270980f",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"todo",
+						"ea149535-05ca-4a61-8e5a-416f3270980f"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "removeToDo",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost/api/todo/d9df7140-5ca0-4eb3-bf86-9e27bb39b527",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"todo",
+								"d9df7140-5ca0-4eb3-bf86-9e27bb39b527"
+							]
+						}
+					},
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		}
+	]
+}

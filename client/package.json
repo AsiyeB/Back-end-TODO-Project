@@ -1,0 +1,20 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss assets/scss/style.scss assets/css/style.css",
+    "start": "npm run build-css && npm run build-css -- -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "finalhandler": "^1.1.2",
+    "node-sass": "^4.12.0",
+    "serve-static": "^1.14.1"
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "description": ""
+}

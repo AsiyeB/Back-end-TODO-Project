@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "e661ee48-641d-4290-8fe6-b33dc5febb7a",
+		"name": "task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addTask",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\t\"todoId\":\"4\",\r\n\t\t\"checked\":\"unchecked\",\r\n\t\t\"description\":\"task 1\",\r\n\t\t\"image\":\"img1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/api/task",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/api/task",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTaskById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/api/task/b9f69908-c752-4ad4-bc93-1f27426d049e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"task",
+						"b9f69908-c752-4ad4-bc93-1f27426d049e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateTask",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\t\"todoId\":\"7\",\r\n\t\t\"checked\":\"unchecked\",\r\n\t\t\"description\":\"task 1\",\r\n\t\t\"image\":\"img1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost/api/task/902f2b69-6def-4900-9b37-0a32b7bd4a4e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"task",
+						"902f2b69-6def-4900-9b37-0a32b7bd4a4e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "removeTask",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/api/task/b9f69908-c752-4ad4-bc93-1f27426d049e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"task",
+						"b9f69908-c752-4ad4-bc93-1f27426d049e"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

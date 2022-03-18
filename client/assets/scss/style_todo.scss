@@ -1,0 +1,373 @@
+@import "./media_query";
+@import "./colors";
+//@import "./tab";
+body {
+  background-color: $body;
+  //font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
+  .total {
+    display: flex;
+    justify-content: center;
+
+    //align-items: center;
+    //width:100%;
+
+    .partToDo {
+      background-color: $container;
+      border:1px solid white;
+      border-radius: 20px;
+      position: absolute;
+      padding: 30px;
+      width:90%;
+
+      .title {
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        font-style: italic;
+        text-align: center;
+        position: relative;
+        color:white;
+      }
+
+      .tab_todo {
+        overflow: hidden;
+        //border-top: 1px solid;
+    
+        //border: 1px solid #9a9a9a;
+        //background-color: #9a9a9a;
+        background-color: white;
+        border-radius: 10px;
+        height: 50px;
+        button {
+          //color: white;
+          //color:$hover;
+          background-color: inherit;
+          float: left;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          transition: 0.3s;
+          padding: 0px 16px;
+          height: 99.5%;
+          border-radius: 10px;
+        }
+        button:hover{
+          background-color: $hover;
+          color:white;
+        }
+        .dashboard {
+          background-color:inherit;
+          color:$hover;
+        }
+        .boards {
+          background-color: inherit;
+          color:$hover;
+        }
+        .todos {
+          background-color: $ordinary;
+          color:white;
+        }
+      }
+
+      .container_todo {
+        padding-top: 20px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: $body;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        //padding:15px 15px 0px 15px ;
+        margin: 10px 0px;
+
+        .info {
+          display: flex;
+
+          background-color: white;
+          border-radius: 10px;
+          //width:100%;
+          padding: 5px 5px 5px 0px;
+          margin: 0px 20px 10px 20px;
+
+          @include breakpoint(small) {
+            font-size: 14px;
+          }
+
+          @include breakpoint(xsmall) {
+            font-size: 12px;
+          }
+
+          @include breakpoint(xxsmall) {
+            font-size: 10px;
+          }
+
+          .board_info {
+            flex-grow: 1;
+            padding: 10px 0px 10px 10px;
+
+            @include breakpoint(xsmall) {
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+          }
+          .select_board {
+            width: 70px;
+            margin-right: 10px;
+            border-radius: 10px;
+            background-color: $select_board;
+            color: white;
+          }
+        }
+        /*.total_todos {
+          border-radius: 10px;
+          margin: 10px;
+          background-color: white;
+          border: 1px solid black;*/
+
+        .total_todos {
+          background-color: white;
+          border-radius: 10px;
+          margin: 0px 20px 10px 20px;
+
+          .todo {
+            //position: relative;
+            border-color: $body;
+            border-width: 1px;
+            border-style: solid;
+            background-color: $body;
+            float: left;
+            width: 220px;
+            height: 280px;
+            margin: 30px 15px;
+            padding: 10px;
+            border-radius: 20px;
+            //display: flex;
+           // flex-wrap: wrap;
+
+
+            @include breakpoint(small) {
+              margin: 20px 10px;
+              font-size: 14px;
+            }
+
+            @include breakpoint(xsmall) {
+              margin: 10px 5px;
+              font-size: 12px;
+            }
+
+            .header {
+              color: white;
+              text-align: center;
+              padding: 5px 0px 5px 0px;
+              //border-color:black;
+              //border-width: 1px;
+              //border-style: solid;
+              background-color: $ordinary;
+              margin-bottom: 10px;
+              border-radius: 10px;
+              font-family: "Comic Sans MS", cursive, sans-serif;
+              font-size: 16px;
+            }
+
+            .all_done {
+              background-color: $all_done;
+            }
+            .todo_container {
+              padding: 5px 5px 0px 5px;
+              //margin:0px 0px 3px 0px;
+              //margin:5px 3px 3px 3px;
+              background-color: white;
+              border-radius: 8px;
+              height: 220px;
+              overflow: auto;
+              .add_task {
+                display: flex;
+                padding: 5px;
+                background-color: $task;
+                border-radius: 15px;
+                border: 1px solid $body;
+
+                .textInput {
+                  width: 80%;
+                  height: 25px;
+                  margin: 0 auto;
+                  border: 2px solid $body;
+                  //border:solid 1px #ccc;
+                  //border-radius: 10px;
+                  border-top-left-radius: 8px;
+                  border-bottom-left-radius: 8px;
+                  flex-grow: 1;
+                }
+
+                .add_btn {
+                  background: $add_btn;
+                  font-weight: bold;
+                  color: white;
+                  margin: 0 auto;
+                  height: 25px;
+                  cursor: pointer;
+                  width: 20%;
+                  //border:solid 1px;
+                  //border-radius: 8px;
+                  border-top-right-radius: 8px;
+                  border-bottom-right-radius: 8px;
+                  padding: 3px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  font-size: 14px;
+                  font-family: "Comic Sans MS", cursive, sans-serif;
+                }
+
+                /*.add_btn:hover {
+                        background: grey;
+                    }*/
+              }
+
+              ul {
+                padding: 0px;
+                list-style-type: none;
+                //height: 175px;
+                //overflow: auto;
+                li {
+                  display: flex;
+                  padding-top: 3px;
+                  padding-bottom: 3px;
+                  border-radius: 10px;
+                  border-color: $body;
+                  background-color: $task;
+                  border-width: 1px;
+                  border-style: solid;
+                  margin: 3px 0px 3px 0px;
+                  align-items: center;
+
+                  /*                            input:checked> li{
+                                                    border-color:#ddd;
+                                                }*/
+
+                  .task {
+                    flex-grow: 1;
+                    text-align: center;
+                    // opacity: 0.8;
+
+                    @include textOverflow(50px)
+                  }
+
+                  input:checked + .task {
+                    opacity: 0.5;
+                    text-decoration: line-through;
+                  }
+
+                  img {
+                    border-radius: 50%;
+                    width: 35px;
+                    height: 35px;
+                    padding-right: 2px;
+                  }
+                }
+                li:hover {
+                  background: #ddd;
+                }
+              }
+            }
+          }
+          .add_todo {
+            border-color: #ddd;
+            border-width: 1px;
+            border-style: solid;
+            background-color: $add_todo;
+            float: left;
+            cursor: pointer;
+            width: 220px;
+            height: 280px;
+            margin: 30px 15px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            text-align: center;
+
+            @include breakpoint(small) {
+              margin: 20px 10px;
+              font-size: 14px;
+            }
+
+            @include breakpoint(xsmall) {
+              margin: 10px 5px;
+              font-size: 12px;
+            }
+            h1 {
+              color: white;
+              font-weight: bold;
+              //font-size: 24px;
+            }
+          }
+
+          .add_todo:hover {
+            background-color: $hover;
+          }
+        }
+      }
+      //}
+    }
+  }
+}
+
+/* position: relative;
+                            -webkit-user-select: none;
+                            -moz-user-select: none;
+                            -ms-user-select: none;
+                            user-select: none;
+    
+    
+                            input {
+                                position: absolute;
+                                opacity: 0;
+                                cursor: pointer;
+                                height: 0;
+                                width: 0;
+                            }
+    
+                            label {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                height: 25px;
+                                width: 25px;
+                                background-color: #eee;
+                                border-radius:50%;
+                            }
+                            
+                            &:hover input + label {
+                                background-color: orangered;
+                            }
+    
+                            input:checked + label {
+                                background-color: #2196F3;
+                            }
+    
+                            label:after {
+                                content: "";
+                                position: absolute;
+                                display: none;
+                
+                            }
+    
+                            input:checked ~ .task:after {
+                                display: block;
+                            }
+    
+                            label:after {
+                                left: 9px;
+                                top: 5px;
+                                width: 5px;
+                                height: 10px;
+                                border: solid white;
+                                border-width: 0 3px 3px 0;
+                                -webkit-transform: rotate(45deg);
+                                -ms-transform: rotate(45deg);
+                                transform: rotate(45deg);
+                            }
+                            */
